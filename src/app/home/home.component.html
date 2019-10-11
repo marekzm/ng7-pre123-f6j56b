@@ -1,9 +1,12 @@
-<h1 [ngStyle]="{ 'color' : h1Style ? 'gray' : 'black' }">vlozim domace</h1>
+<h1 [ngStyle]="{ 'color' : h1Style ? 'gray' : 'black' }">Informacie o obci:</h1>
 <ul *ngIf = "users">
-  <li>test prveho</li>
+ 
 	<li *ngFor = "let user of users.data">
 
-	<p>{{user?.first_name}}</p>
+	<p>{{user?.first_name}}
+    {{user?.last_name}}
+    <img attr.src={{user?.avatar}} />
+  </p>
 
 	</li>
 </ul>
